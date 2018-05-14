@@ -1,0 +1,125 @@
+\documentclass[10pt]{exam}
+%\printanswers
+\usepackage{fullpage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{.25cm}
+
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\usepackage{hyperref}
+\hypersetup{
+  letterpaper,
+  colorlinks,
+  linkcolor=red,
+  citecolor=darkgreen,
+  menucolor=darkred,
+  urlcolor=blue,
+  pdfpagemode=none,
+  pdftitle={Introduction To Git},
+  pdfauthor={Christopher M. Bourke},
+  pdfcreator={$ $Id: cv-us.tex,v 1.28 2009/01/01 00:00:00 cbourke Exp $ $},
+  pdfsubject={PhD Thesis},
+  pdfkeywords={}
+}
+
+\definecolor{MyDarkBlue}{rgb}{0,0.08,0.45}
+\definecolor{MyDarkRed}{rgb}{0.45,0.08,0}
+\definecolor{MyDarkGreen}{rgb}{0.08,0.45,0.08}
+
+\definecolor{mintedBackground}{rgb}{0.95,0.95,0.95}
+\definecolor{mintedInlineBackground}{rgb}{.90,.90,1}
+
+%\usepackage{newfloat}
+\usepackage[newfloat=true]{minted}
+\setminted{mathescape,
+               linenos,
+               autogobble,
+               frame=none,
+               framesep=2mm,
+               framerule=0.4pt,
+               %label=foo,
+               xleftmargin=2em,
+               xrightmargin=0em,
+               startinline=true,  %PHP only, allow it to omit the PHP Tags *** with this option, variables using dollar sign in comments are treated as latex math
+               numbersep=10pt, %gap between line numbers and start of line
+               style=default, %syntax highlighting style, default is "default"
+               			    %gallery: http://help.farbox.com/pygments.html
+			    	    %list available: pygmentize -L styles
+               bgcolor=mintedBackground} %prevents breaking across pages
+               
+\setmintedinline{bgcolor={mintedBackground}}
+\setminted[text]{bgcolor={mintedBackground},linenos=false,autogobble,xleftmargin=1em}
+%\setminted[php]{bgcolor=mintedBackgroundPHP} %startinline=True}
+\SetupFloatingEnvironment{listing}{name=Code Sample}
+\SetupFloatingEnvironment{listing}{listname=List of Code Samples}
+
+\begin{document}
+
+\section*{CSCE 155 - Lab 11 - Encapsulation \& Structures - Worksheet}
+
+Names: \underline{\hspace{10cm}}
+
+\begin{questions}
+
+\question Test your palindrome program on the following inputs:
+\begin{parts}
+  \part \mintinline{text}{abba}  \part \mintinline{text}{aaba}  \part \mintinline{text}{foobar}  \part \mintinline{text}{civic}  \part \mintinline{text}{civil}  \part \mintinline{text}{foo}
+\end{parts}
+
+\question Fill out the following table with the specified values using the \mintinline{text}{recursiveFunction} program.
+
+\begin{table}[h]
+\centering
+\caption{My caption}
+\label{my-label}
+{\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{|c|p{4cm}|p{4cm}|}
+\hline
+$n$ & $f(n)$ & Time (sec) \\
+\hline\hline
+0   &        &            \\
+\hline
+1   &        &            \\
+\hline
+2   &        &            \\
+\hline
+5   &        &            \\
+\hline
+10  &        &            \\
+\hline
+20  &        &            \\
+\hline
+30  &        &            \\
+\hline
+40  &        &            \\
+\hline
+42  &        &            \\
+\hline
+44  &        &            \\
+\hline
+46  &        &            \\
+\hline
+48  &        &           \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\question Without actually running it, make a prediction on how long 
+  it would take to run the program for $n = 50$.  How long would it 
+  run for $n = 100$?\question What values do you get for each of the following inputs with 
+  your Jacobsthal program?\begin{parts}
+  \part $n = 0$  \part $n = 1$  \part $n = 5$  \part $n = 10$  \part $n = 20$  \part $n = 32$\end{parts}
+
+\question Demonstrate your working programs to a lab instructor.  
+
+\end{questions}
+  
+Lab Instructor Signature\underline{\hspace{7.5cm}}
+
+\end{document}
