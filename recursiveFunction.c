@@ -1,7 +1,13 @@
-#include <stdio.h>
+/**
+ * Demonstration of a recursive function.
+ */
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 
+/**
+ * A (linear homogeneous) recursive function
+  */ 
 int recursiveFunction(int n);
 
 int main(int argc, char **argv) {

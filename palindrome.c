@@ -1,6 +1,10 @@
-
-#include <stdio.h>
+/**
+ * A program to compute whether or not a given
+ * string is a palindrome (the same backwards as
+ * forwards).
+ */
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 /**
