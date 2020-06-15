@@ -11,7 +11,7 @@
  * This function should return true if the given (sub)string is
  * a palindrome.  The function should be recursive.
  */
-int isPalindrome(const char *str, int left_index, int right_index);
+int isPalindrome(const char *str, int leftIndex, int rightIndex);
 
 int main(int argc, char **argv) {
   if (argc != 2) {
@@ -28,6 +28,6 @@ int main(int argc, char **argv) {
   return 0;
 }
 
-int isPalindrome(const char *str, int left_index, int right_index) {
+int isPalindrome(const char *str, int leftIndex, int rightIndex) {
   // TODO: implement this function as specified
 }
