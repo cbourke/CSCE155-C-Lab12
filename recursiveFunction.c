@@ -7,8 +7,8 @@
 
 /**
  * A (linear homogeneous) recursive function
-  */ 
-int recursiveFunction(int n);
+ */ 
+long recursiveFunction(int n);
 
 int main(int argc, char **argv) {
   if (argc != 2) {
@@ -19,19 +19,19 @@ int main(int argc, char **argv) {
 
   time_t start, end;
   start = time(NULL);
-  int result = recursiveFunction(n);
+  long result = recursiveFunction(n);
   end = time(NULL);
 
   int time = (end - start);
 
-  printf("f(%d) = %d\n", n, result);
+  printf("f(%d) = %ld\n", n, result);
 
   printf("Computation Time: %d seconds\n", time);
 
   return 0;
 }
 
-int recursiveFunction(int n) {
+long recursiveFunction(int n) {
   if (n == 0) {
     return 2;
   } else if (n == 1) {
