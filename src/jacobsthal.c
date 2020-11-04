@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
 
   int time = (end - start);
 
-  printf("f(%d) = %lld\n", n, result);
+  printf("Jacobsthal(%d) = %lld\n", n, result);
 
   printf("Computation Time: %d seconds\n", time);
 
