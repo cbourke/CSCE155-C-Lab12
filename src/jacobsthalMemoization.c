@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include <gmp.h>
 
 /**
  * Computes the n-th Jacobsthal number using an iterative
