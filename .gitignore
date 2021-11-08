@@ -32,6 +32,7 @@ figures/_minted*
 
 # solution and grading scripts
 solution
+scripts
 
 # binaries
 a.out
