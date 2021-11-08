@@ -1,11 +1,11 @@
 # Computer Science I
 ## Lab 12.0 - Recursion
 
-This is a lab used in Computer Science I (CSCE 155E, CSCE 155H) in the 
-[Department of Computer Science & Engineering](https://cse.unl.edu) at the 
+This is a lab used in Computer Science I (CSCE 155E, CSCE 155H) in the
+[School of Computing](https://computing.unl.edu/) at the 
 [University of Nebraska-Lincoln](https://unl.edu).
 
-## 1. Overview 
+## 1. Overview
 
 ### Prior to Lab
 
@@ -89,13 +89,13 @@ Clone the project code for this lab from GitHub using the following URL:
 
 The Jacobsthal sequence is very similar to the Fibonacci sequence in
 that it is defined by its two previous terms. The difference is that the
-second term is multiplied by two. 
+second term is multiplied by two.
 <p align="center">
 <img src="img/jacobsthal.png" alt="Jacobsthal" width="50%"/>
 </p>  
 
 Write a recursive function to compute the *n*-th Jacobsthal number.
-Since this sequence grows exponentially, you will quickly reach the 
+Since this sequence grows exponentially, you will quickly reach the
 limit of what a regular `int` variable can represent.  To support larger
 values, your return type should be a `long long` (typically a 64-bit
 integer allowing you to represent values up to 9,223,372,036,854,775,807).  
@@ -114,10 +114,10 @@ examples and note the execution times for each.
 - J(16) = 21845
 - J(32) = 1431655765
 
-### 3.2 Avoiding Redundancy 
+### 3.2 Avoiding Redundancy
 
-As you may have observed, the naive recursive Jacobsthal function you 
-wrote is very inefficient.  In fact, if you attempted to run it for 
+As you may have observed, the naive recursive Jacobsthal function you
+wrote is very inefficient.  In fact, if you attempted to run it for
 *n = 64* it would take several *years* to compute.  This is because
 the function performs an exponential amount of *redundant* work.  The
 same function is called on the same input billions of times.  
@@ -130,13 +130,13 @@ program.
 
 Another way of avoiding this redundancy is to use a technique called
 *memoization* which stores previously computed values so as not to
-compute them over and over.  In general: 
+compute them over and over.  In general:
 
   - We still use recursion, but we also maintain a table of values
-  
+
   - When we recurse, we check if the value has already been computed;
-  
-    - If it has been computed, we use the value and return it 
+
+    - If it has been computed, we use the value and return it
       (and make no further recursive calls)
 
     - If it has not, then we "pay" for the recursion, but instead of
@@ -146,7 +146,7 @@ compute them over and over.  In general:
   - This usually requires us to setup a table as well as filling it
     with "base case" values and other special flag values so that we
     can determine if the value has been computed yet or not.
-    
+
 Adapt your naive recursive function to use memoization in the
 `jacobsthalMemoization.c` program.  Test your program using *n = 64*
 (the largest value representable by a 64-bit integer).
@@ -189,7 +189,7 @@ spaces as a command line argument you can use double quotes.  For example:
 
     - `jacobsthalMemoization.c`
     - `palindrome.c`
-    
+
     through the webhandin (<https://cse-apps.unl.edu/handin>) using your
     cse login and password.
 
@@ -203,17 +203,16 @@ spaces as a command line argument you can use double quotes.  For example:
     displayed. The formatting may differ slightly which is fine. As long
     as your program successfully compiles, runs and outputs the *same
     values*, it is considered correct.
-    
+
 ## Advanced Activity (Optional)
 
 1.  Even using a `long long` variable type, the maximum value we could
-    represent was not very large (~9 quintillion).  For programs to 
+    represent was not very large (~9 quintillion).  For programs to
     represent larger numbers, we need to use a library that supports
     *arbitrary precision* arithmetic.  For C, the de facto library for
     this is GNU's Multi Precision or *gmp*.  
-    
+
     Read a gmp tutorial <https://gmplib.org/manual/Introduction-to-GMP>
     and adapt your Jacobsthal program to use it so that it can compute
     arbitrarily large values in the sequence.  To link with this library, use
     the following: `gcc jacobsthalMemoization.c -lgmp`
-
