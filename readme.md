@@ -2,7 +2,7 @@
 ## Lab 12.0 - Recursion
 
 This is a lab used in Computer Science I (CSCE 155E, CSCE 155H) in the
-[School of Computing](https://computing.unl.edu/) at the 
+[School of Computing](https://computing.unl.edu/) at the
 [University of Nebraska-Lincoln](https://unl.edu).
 
 ## 1. Overview
@@ -113,12 +113,14 @@ examples and note the execution times for each.
 - J(8) = 85
 - J(16) = 21845
 - J(32) = 1431655765
+- J(64) = 6148914691236517205 (do not actually run this one)
 
 ### 3.2 Avoiding Redundancy
 
 As you may have observed, the naive recursive Jacobsthal function you
 wrote is very inefficient.  In fact, if you attempted to run it for
-*n = 64* it would take several *years* to compute.  This is because
+*n = 64* (the largest Jacobsthal value that will fit in a 64-bit signed
+integer) it would take several *years* to compute.  This is because
 the function performs an exponential amount of *redundant* work.  The
 same function is called on the same input billions of times.  
 
