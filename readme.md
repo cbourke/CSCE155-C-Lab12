@@ -1,24 +1,24 @@
 # Computer Science I
 ## Lab 12.0 - Recursion
+[School of Computing](https://computing.unl.edu)  
+[College of Engineering](https://engineering.unl.edu/)  
+[University of Nebraska-Lincoln](https://unl.edu)  
+[University of Nebraska-Omaha](https://unomaha.edu)  
 
-This is a lab used in Computer Science I (CSCE 155E, CSCE 155H) in the
-[School of Computing](https://computing.unl.edu/) at the
-[University of Nebraska-Lincoln](https://unl.edu).
+## Prior to Lab
 
-## 1. Overview
+* Read and familiarize yourself with this handout.
+* Read the required chapters(s) of the textbook as
+  outlined in the course schedule.
 
-### Prior to Lab
+In addition, you may want to:
 
-Before attending this lab:
+* Read Chapters 11 and 24 of the
+  [Computer Science I](http://cse.unl.edu/~cbourke/ComputerScienceOne.pdf) textbook
 
-1.  Read and familiarize yourself with this handout.
-
-2.  Read Chapters 11 and 24 of the [Computer Science
-    I](http://cse.unl.edu/~cbourke/ComputerScienceOne.pdf) textbook
-
-3.  Watch Videos 12.1 thru 12.3 of the [Computer Science
-    I](https://www.youtube.com/playlist?list=PL4IH6CVPpTZVkiEnCEOdGbYsFEdtKc5Bx)
-    video series
+* Watch Videos 12.1 thru 12.3 of the
+  [Computer Science I](https://www.youtube.com/playlist?list=PL4IH6CVPpTZVkiEnCEOdGbYsFEdtKc5Bx)
+  video series
 
 ### Peer Programming Pair-Up
 
@@ -90,16 +90,20 @@ Clone the project code for this lab from GitHub using the following URL:
 The Jacobsthal sequence is very similar to the Fibonacci sequence in
 that it is defined by its two previous terms. The difference is that the
 second term is multiplied by two.
-<p align="center">
-<img src="img/jacobsthal.png" alt="Jacobsthal" width="50%"/>
-</p>  
+
+$$J_n = \left\{\begin{array}{ll}
+  0 & \textrm{if } n = 0 \\
+  1 & \textrm{if } n = 1 \\
+  J_{n-1} + 2J_{n-2} & \textrm{otherwise} \\
+\end{array}
+\right.$$
 
 Write a recursive function to compute the *n*-th Jacobsthal number.
 Since this sequence grows exponentially, you will quickly reach the
 limit of what a regular `int` variable can represent.  To support larger
 values, your return type should be a `long long` (typically a 64-bit
 integer allowing you to represent values up to 9,223,372,036,854,775,807).  
-We have provided some starter code in the `src/jacobsthal.c` source file which
+We have provided some starter code in the `jacobsthal.c` source file which
 reads in *n* as a command line argument and prints the result as well
 as an estimate on its execution time.
 
@@ -127,7 +131,7 @@ same function is called on the same input billions of times.
 One way of avoiding this redundancy is to not use recursion at all.
 In general, any recursive function can be written using normal loop
 control structures.  An equivalent, non-recursive function that computes
-the Jacobsthal sequence has been provided in the `src/jacobsthalMemoization.c`
+the Jacobsthal sequence has been provided in the `jacobsthalMemoization.c`
 program.  
 
 Another way of avoiding this redundancy is to use a technique called
@@ -178,7 +182,7 @@ function on the substring "ivi".  However, with the proper function
 parameters, we don't create a new substring; we simply pass the relevant
 indices that define the substring.
 
-We have provided starter code in the `src/palindrome.c` source file.  
+We have provided starter code in the `palindrome.c` source file.  
 Complete the `isPalindrome` function as specified above.  Test your
 program with several examples.  Note that to provide a phrase with
 spaces as a command line argument you can use double quotes.  For example:
@@ -192,19 +196,10 @@ spaces as a command line argument you can use double quotes.  For example:
     - `jacobsthalMemoization.c`
     - `palindrome.c`
 
-    through the webhandin (<https://cse-apps.unl.edu/handin>) using your
-    cse login and password.
+    and verify it compiles and works through the grader.
 
 2.  Even if you worked with a partner, you *both* should turn in all
     files.
-
-3.  Verify your program by grading yourself through the webgrader
-    (<https://cse.unl.edu/~cse155e/grade/>) using the same credentials.
-
-4.  Recall that both expected output and your program's output will be
-    displayed. The formatting may differ slightly which is fine. As long
-    as your program successfully compiles, runs and outputs the *same
-    values*, it is considered correct.
 
 ## Advanced Activity (Optional)
 

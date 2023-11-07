@@ -34,8 +34,10 @@ int main(int argc, char **argv) {
   //         the value has not yet been computed and cached
 
   time_t start, end;
-  start = time(NULL);
   long long iterativeResult = jacobsthalIterative(n);
+
+  start = time(NULL);
+
   //TODO: call your function here
 
   end = time(NULL);
