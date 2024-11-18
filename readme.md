@@ -91,7 +91,7 @@ The Jacobsthal sequence is very similar to the Fibonacci sequence in
 that it is defined by its two previous terms. The difference is that the
 second term is multiplied by two.
 
-$$J_n = \left\{\begin{array}{ll}
+$$J_n = \left\lbrace\begin{array}{ll}
   0 & \textrm{if } n = 0 \\
   1 & \textrm{if } n = 1 \\
   J_{n-1} + 2J_{n-2} & \textrm{otherwise} \\
